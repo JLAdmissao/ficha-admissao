@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ficha de Admissão – JL Ramos</title>
+<meta name="robots" content="noindex">
+<script>
+  var FICHA = 'https://script.google.com/macros/s/AKfycbwV78bQ653Twy-73uvJchQ8sfyaJ-4HInlxvNp30OYI9LQpiRl4zqhNiik7POXq2AGM/exec';
+  var p = new URLSearchParams(location.search);
+  // aceita admissao.jlramos.com.br/leonardo e ?resp=leonardo
+  var resp = p.get('resp') || location.pathname.split('/').filter(Boolean)[0] || '';
+  resp = resp.toLowerCase().replace(/[^a-z0-9.]/g, '');
+  location.replace(FICHA + (resp ? '?resp=' + encodeURIComponent(resp) : ''));
+</script>
+<style>
+  body{margin:0;min-height:100vh;display:grid;place-items:center;font-family:system-ui,sans-serif;background:#f7f4ee;color:#5a4723}
+  a{color:#755e31;font-weight:600}
+</style>
+</head>
+<body>
+  <p>Abrindo a ficha de admissão… <a href="https://script.google.com/macros/s/AKfycbwV78bQ653Twy-73uvJchQ8sfyaJ-4HInlxvNp30OYI9LQpiRl4zqhNiik7POXq2AGM/exec">clique aqui</a> se não abrir.</p>
+</body>
+</html>
